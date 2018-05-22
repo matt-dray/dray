@@ -1,0 +1,10 @@
+Package: dray
+Title: Personal Package of Matt Dray
+Version: 0.0.0.9000
+Authors@R: person("Matt", "Dray", email = "mwdray@gmail.com", role = c("aut", "cre"))
+Description: Miscellaneous functions for personal use.
+Depends: R (>= 3.4.3)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
