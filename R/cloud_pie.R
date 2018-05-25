@@ -1,13 +1,24 @@
 #' Cloud Pie: A Totally Unnecessary Frankenstein's Monster.
 #'
-#' An unholy matrimony of a 3D-Exploded-Pie-Chart and a word cloud. You're welcome.
+#' An unholy matrimony of a 3D exploded pie chart and a word cloud. You're welcome. Just promise you'll never, ever use this function.
 #' @param data Summary dataframe with two columns: categories, and counts for those categories.
 #' @param name_col Column containing the category name.
-#' @param name_col Column containing the counts for each category.
-#' @keywords
+#' @param count_col Column containing the counts for each category.
+#' @keywords pie, wordcloud, ohgodmyeyes
+#' @import plotrix
+#' @import wordcloud
 #' @export
 #' @examples
-#' cat_function()
+#' library(dplyr)
+#'
+#' data <- read.csv("https://raw.githubusercontent.com/matt-dray/draytasets/master/ssb_pokeballs.csv")
+#'
+#' pkmn <- data %>%
+#'   group_by(pokemon) %>%
+#'   count() %>%
+#'   ungroup()
+#'
+#' cloud_pie(data = pkmn, name_col = "pokemon", count_col = "n")
 
 cloud_pie <- function(data, name_col, count_col, ...){
 

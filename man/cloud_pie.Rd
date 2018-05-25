@@ -11,11 +11,23 @@ cloud_pie(data, name_col, count_col, ...)
 
 \item{name_col}{Column containing the category name.}
 
-\item{name_col}{Column containing the counts for each category.}
+\item{count_col}{Column containing the counts for each category.}
 }
 \description{
-An unholy matrimony of a 3D-Exploded-Pie-Chart and a word cloud. You're welcome.
+An unholy matrimony of a 3D exploded pie chart and a word cloud. You're welcome. Just promise you'll never, ever use this function.
 }
 \examples{
-cat_function()
+library(dplyr)
+
+data <- read.csv("https://raw.githubusercontent.com/matt-dray/draytasets/master/ssb_pokeballs.csv")
+
+pkmn <- data \%>\%
+  group_by(pokemon) \%>\%
+  count() \%>\%
+  ungroup()
+
+cloud_pie(data = pkmn, name_col = "pokemon", count_col = "n")
 }
+\keyword{ohgodmyeyes}
+\keyword{pie,}
+\keyword{wordcloud,}

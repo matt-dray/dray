@@ -2,3 +2,5 @@
 
 export(cat_function)
 export(cloud_pie)
+import(plotrix)
+import(wordcloud)
