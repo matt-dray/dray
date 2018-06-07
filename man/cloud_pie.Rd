@@ -9,9 +9,9 @@ cloud_pie(data, name_col, count_col, ...)
 \arguments{
 \item{data}{Summary dataframe with two columns: categories, and counts for those categories.}
 
-\item{name_col}{Column containing the category name.}
+\item{name_col}{Column containing the category name (character).}
 
-\item{count_col}{Column containing the counts for each category.}
+\item{count_col}{Column containing the counts for each category (numeric).}
 }
 \description{
 An unholy matrimony of a 3D exploded pie chart and a word cloud. You're welcome. Just promise you'll never, ever use this function.

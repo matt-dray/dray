@@ -2,8 +2,8 @@
 #'
 #' An unholy matrimony of a 3D exploded pie chart and a word cloud. You're welcome. Just promise you'll never, ever use this function.
 #' @param data Summary dataframe with two columns: categories, and counts for those categories.
-#' @param name_col Column containing the category name.
-#' @param count_col Column containing the counts for each category.
+#' @param name_col Column containing the category name (character).
+#' @param count_col Column containing the counts for each category (numeric).
 #' @keywords pie, wordcloud, ohgodmyeyes
 #' @import plotrix
 #' @import wordcloud
