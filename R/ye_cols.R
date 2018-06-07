@@ -1,22 +1,19 @@
-#' @title A Vector Of Colours From The Ye Album Cover.
+#' A Vector Of Colours From The Ye Album Cover.
 #'
-#' @description Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
-#'
+#' Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
+#' @keywords colour, color, pallette, kanye, ye
+#' @import
+#' @export
 #' @return A list of named hexadecimal colours.
-#'
 #' @examples
-#'
-#' library(ggplot2)
 #' library(dray)
+#' library(ggplot2)
 #'
 #'    ggplot(mtcars) +
 #'    aes(x = mpg, y = wt) +
 #'    geom_point(
 #'    colour = ye_cols["text_green"]
 #'    )
-#'
-#' @export
-#'
 
 ye_cols <- c(
   mountain_blue = "#233956", # Catalina Blue (Blue)

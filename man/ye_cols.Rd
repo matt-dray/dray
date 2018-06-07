@@ -15,15 +15,17 @@ A list of named hexadecimal colours.
 Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
 }
 \examples{
-
-library(ggplot2)
 library(dray)
+library(ggplot2)
 
    ggplot(mtcars) +
    aes(x = mpg, y = wt) +
    geom_point(
    colour = ye_cols["text_green"]
    )
-
 }
-\keyword{datasets}
+\keyword{color,}
+\keyword{colour,}
+\keyword{kanye,}
+\keyword{pallette,}
+\keyword{ye}
