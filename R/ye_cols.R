@@ -2,9 +2,7 @@
 #'
 #' Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
 #' @keywords colour, color, pallette, kanye, ye
-#' @import
 #' @export
-#' @return A list of named hexadecimal colours.
 #' @examples
 #' library(dray)
 #' library(ggplot2)

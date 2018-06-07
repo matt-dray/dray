@@ -8,9 +8,6 @@
 \usage{
 ye_cols
 }
-\value{
-A list of named hexadecimal colours.
-}
 \description{
 Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
 }
