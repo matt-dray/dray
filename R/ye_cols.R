@@ -1,6 +1,6 @@
-#' @title A vector of simplified colours from the ye album cover
+#' @title A Vector Of Colours From The Ye Album Cover.
 #'
-#' @description TBC.
+#' @description Simplified colours sampled from the cover of Kanye West's 2018 album 'ye'.
 #'
 #' @return A list of named hexadecimal colours.
 #'
@@ -8,18 +8,12 @@
 #'
 #' library(ggplot2)
 #' library(dray)
-#' library(dplyr)
 #'
-#' mtcars %>%
-#'    ggplot +
-#'    aes(
-#'    x = mpg,
-#'    y = wt
-#'    ) +
+#'    ggplot(mtcars) +
+#'    aes(x = mpg, y = wt) +
 #'    geom_point(
-#'    colour = gov_cols["text_green"]
-#'    ) +
-#'    theme_gov()
+#'    colour = ye_cols["text_green"]
+#'    )
 #'
 #' @export
 #'
@@ -30,7 +24,7 @@ ye_cols <- c(
   cloud_blue1 = "#7a8aa2",  # Ship Cove (Blue)
   cloud_white = "#dfd7c9",  # Albescent White (White)
   cloud_grey = "#b5b2b0",  # Bombay (Grey)
-  cloud_blue = "#9da3ae",  # Spun Pearl (Blue)
+  cloud_blue2 = "#9da3ae",  # Spun Pearl (Blue)
   text_green = "#31ef56"  # Malachite (Green)
 )
 
