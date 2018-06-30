@@ -1,4 +1,4 @@
-#' PhD Thesis By Matt Dray.
+#' Text Of PhD Thesis By Matt Dray.
 #'
 #' Text of the PhD thesis 'Effects of multiple environmental stressors on litter
 #' chemical composition and decomposition' (Dray, 2014). Character vector where
@@ -14,7 +14,7 @@
 #' stressors on litter chemical composition and decomposition. PhD thesis,
 #' Cardiff University.
 #'
-#' @source \href{http://orca.cf.ac.uk/id/eprint/68365/}{Orca online research portal}
+#' @source \href{http://orca.cf.ac.uk/68365/}{Orca online research portal}
 #'
 #' @examples
 #' data(phd)

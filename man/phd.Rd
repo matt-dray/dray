@@ -3,10 +3,10 @@
 \docType{data}
 \name{phd}
 \alias{phd}
-\title{PhD Thesis By Matt Dray.}
+\title{Text Of PhD Thesis By Matt Dray.}
 \format{An object of class \code{character} of length 1023.}
 \source{
-\href{http://orca.cf.ac.uk/id/eprint/68365/}{Orca online research portal}
+\href{http://orca.cf.ac.uk/68365/}{Orca online research portal}
 }
 \usage{
 data(phd)
