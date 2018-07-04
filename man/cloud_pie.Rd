@@ -26,7 +26,11 @@ pkmn <- data \%>\%
   count() \%>\%
   ungroup()
 
-cloud_pie(data = pkmn, name_col = "pokemon", count_col = "n")
+cloud_pie(
+  data = pkmn,
+  name_col = "pokemon",
+  count_col = "n"
+)
 }
 \keyword{ohgodmyeyes}
 \keyword{pie,}

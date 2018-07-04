@@ -18,7 +18,11 @@
 #'   count() %>%
 #'   ungroup()
 #'
-#' cloud_pie(data = pkmn, name_col = "pokemon", count_col = "n")
+#' cloud_pie(
+#'   data = pkmn,
+#'   name_col = "pokemon",
+#'   count_col = "n"
+#' )
 
 cloud_pie <- function(data, name_col, count_col, ...){
 
@@ -37,18 +41,9 @@ cloud_pie <- function(data, name_col, count_col, ...){
   wordcloud(
     words = data[[name_col]],
     freq = data[[count_col]],
-    colors = rainbow(13),
+    colors = sample(colors(), nrow(data)),
     ordered.colors = TRUE,
     vfont = c("gothic english", "plain")
   )
 
 }
-#
-# data <- read.csv("https://raw.githubusercontent.com/matt-dray/draytasets/master/ssb_pokeballs.csv")
-# library(dplyr)
-# pkmn <- data %>%
-#   group_by(pokemon) %>%
-#   count() %>%
-#   ungroup()
-#
-# cloud_pie(data = pkmn, name_col = "pokemon", count_col = "n")
