@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: person("Matt", "Dray", email = "mwdray@gmail.com", role = c("aut", "cre"))
 Description: Miscellaneous personal functions and data. Use at your own risk! 
 Depends: R (>= 3.4.3)
-License: TBC
+License: MIT (see file LICENSE)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
