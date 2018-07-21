@@ -13,3 +13,4 @@ Imports:
     plotrix
 Suggests: testthat
 URL: https://github.com/matt-dray/dray
+BugReports: https://github.com/matt-dray/dray/issues
