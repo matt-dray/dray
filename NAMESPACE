@@ -2,6 +2,8 @@
 
 export(cat_function)
 export(cloud_pie)
+export(make_gif)
 export(ye_cols)
+import(gifski)
 import(plotrix)
 import(wordcloud)
