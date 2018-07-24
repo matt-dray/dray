@@ -32,7 +32,7 @@
 
 <meta property="og:title" content="Make a gif from a folder of PNG image files. — make_gif" />
 
-<meta property="og:description" content="Point to a folder of PNG files and stitch them into a gif. Convenience function for the gifski function." />
+<meta property="og:description" content="Point to a folder of PNG files and engifify them (make them into a gif (I made this word up)). A convenience function for the gifski function." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -104,7 +104,7 @@
 
     <div class="ref-description">
     
-    <p>Point to a folder of PNG files and stitch them into a gif. Convenience function for the gifski function.</p>
+    <p>Point to a folder of PNG files and engifify them (make them into a gif (I made this word up)). A convenience function for the gifski function.</p>
     
     </div>
 
@@ -115,11 +115,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>png_folder</th>
-      <td><p>Folder where you've stored your PNG image files.</p></td>
+      <td><p>Folder where you've stored your PNG image files (.png or .PNG).</p></td>
     </tr>
     <tr>
       <th>gif_path</th>
-      <td><p>File path for your new gif, must end in '.gif' extension.</p></td>
+      <td><p>File path for your new gif including .gif extension.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -129,8 +129,19 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># TODO
-</div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'># filepath of folder containing PNGs</span>
+<span class='no'>gif_in</span> <span class='kw'>&lt;-</span> <span class='st'>"folder/subfolder"</span>
+
+<span class='co'># filepath for the output gif (including extension)</span>
+<span class='no'>gif_out</span> <span class='kw'>&lt;-</span> <span class='st'>"gifs/amazing_gif.gif"</span>
+
+<span class='co'># engifify</span>
+<span class='fu'>make_gif</span>(
+  <span class='kw'>png_folder</span> <span class='kw'>=</span> <span class='no'>gif_in</span>,
+  <span class='kw'>gif_path</span> <span class='kw'>=</span> <span class='no'>gif_out</span>
+)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

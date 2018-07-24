@@ -7,17 +7,29 @@
 make_gif(png_folder = "img", gif_path = "new_gif.gif", ...)
 }
 \arguments{
-\item{png_folder}{Folder where you've stored your PNG image files.}
+\item{png_folder}{Folder where you've stored your PNG image files (.png or .PNG).}
 
-\item{gif_path}{File path for your new gif, must end in '.gif' extension.}
+\item{gif_path}{File path for your new gif including .gif extension.}
 
 \item{...}{Pass further arguments to gifski (see ?gifski for details).}
 }
 \description{
-Point to a folder of PNG files and stitch them into a gif. Convenience function for the gifski function.
+Point to a folder of PNG files and engifify them (make them into a gif (I made this word up)). A convenience function for the gifski function.
 }
 \examples{
-# TODO
+\dontrun{
+# filepath of folder containing PNGs
+gif_in <- "folder/subfolder"
+
+# filepath for the output gif (including extension)
+gif_out <- "gifs/amazing_gif.gif"
+
+# engifify
+make_gif(
+  png_folder = gif_in,
+  gif_path = gif_out
+)
+}
 }
 \keyword{gif,}
 \keyword{gifski}
