@@ -23,21 +23,27 @@
 #' }
 
 
+
 make_gif <- function(
   png_folder = "img", gif_path = "new_gif.gif", ...
 ) {
+
+  # list the PNG files in the folder specified
+  png_files <- list.files(
+    path = png_folder,
+    pattern = ".png|.PNG",  # only PNG files
+    full.names = TRUE  # provide the full path
+  )
+
+  if(length(png_files) < 2) {
+    stop("You need more PNGs to make a gif")
+  }
 
   png("frame%03d.png")
 
   par(ask = FALSE)
 
   dev.off()
-
-  png_files <- list.files(
-    path = png_folder,
-    pattern = ".png|.PNG",
-    full.names = TRUE
-  )
 
   gifski(
     png_files = png_files,
