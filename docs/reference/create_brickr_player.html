@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Make a gif from a folder of PNG image files. — make_gif • dray</title>
+<title>Create A Brick Soccer Player — create_brickr_player • dray</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,11 @@
 
 
 
-<meta property="og:title" content="Make a gif from a folder of PNG image files. — make_gif" />
+<meta property="og:title" content="Create A Brick Soccer Player — create_brickr_player" />
 
-<meta property="og:description" content="Point to a folder of PNG files and engifify them (make them into a gif (I made this word up)). A convenience function for the gifski function." />
+<meta property="og:description" content="Create a tibble that defines a {brickr} soccer player. Pass to
+brickr::bricks_from_table() and then
+brickr::display_bricks() to render it." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,50 +101,77 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Make a gif from a folder of PNG image files.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/matt-dray/dray/blob/master/R/make_gif.R'><code>R/make_gif.R</code></a></small>
-    <div class="hidden name"><code>make_gif.Rd</code></div>
+    <h1>Create A Brick Soccer Player</h1>
+    <small class="dont-index">Source: <a href='https://github.com/matt-dray/dray/blob/master/R/create_kit.R'><code>R/create_kit.R</code></a></small>
+    <div class="hidden name"><code>create_brickr_player.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Point to a folder of PNG files and engifify them (make them into a gif (I made this word up)). A convenience function for the gifski function.</p>
+    <p>Create a tibble that defines a {brickr} soccer player. Pass to
+<code><a href='https://www.rdocumentation.org/packages/brickr/topics/bricks_from_table'>brickr::bricks_from_table()</a></code> and then
+<code><a href='https://www.rdocumentation.org/packages/brickr/topics/display_bricks'>brickr::display_bricks()</a></code> to render it.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>make_gif</span>(<span class='kw'>png_folder</span> <span class='kw'>=</span> <span class='st'>"img"</span>, <span class='kw'>gif_path</span> <span class='kw'>=</span> <span class='st'>"new_gif.gif"</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>create_brickr_player</span>(<span class='kw'>hair_col</span> <span class='kw'>=</span> <span class='fl'>39</span>, <span class='kw'>skin_col</span> <span class='kw'>=</span> <span class='fl'>8</span>, <span class='kw'>boot_col</span> <span class='kw'>=</span> <span class='fl'>2</span>,
+  <span class='kw'>shirt_body_col</span> <span class='kw'>=</span> <span class='fl'>7</span>, <span class='kw'>shirt_sleeve_col</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>shorts_col</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>sock_col</span> <span class='kw'>=</span> <span class='fl'>7</span>, <span class='kw'>sock_trim_col</span> <span class='kw'>=</span> <span class='fl'>1</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>png_folder</th>
-      <td><p>Folder where you've stored your PNG image files (.png or .PNG).</p></td>
+      <th>hair_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
     </tr>
     <tr>
-      <th>gif_path</th>
-      <td><p>File path for your new gif including .gif extension.</p></td>
+      <th>skin_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Pass further arguments to gifski (see ?gifski for details).</p></td>
+      <th>boot_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
+    </tr>
+    <tr>
+      <th>shirt_body_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
+    </tr>
+    <tr>
+      <th>shirt_sleeve_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
+    </tr>
+    <tr>
+      <th>shorts_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
+    </tr>
+    <tr>
+      <th>sock_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
+    </tr>
+    <tr>
+      <th>sock_trim_col</th>
+      <td><p>Numeric code as per <code>brickr::lego_colors</code></p></td>
     </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># filepath of folder containing PNGs</span>
-<span class='no'>gif_in</span> <span class='kw'>&lt;-</span> <span class='st'>"folder/subfolder"</span>
-
-<span class='co'># filepath for the output gif (including extension)</span>
-<span class='no'>gif_out</span> <span class='kw'>&lt;-</span> <span class='st'>"gifs/amazing_gif.gif"</span>
-
-<span class='co'># engifify</span>
-<span class='fu'>make_gif</span>(
-  <span class='kw'>png_folder</span> <span class='kw'>=</span> <span class='no'>gif_in</span>,
-  <span class='kw'>gif_path</span> <span class='kw'>=</span> <span class='no'>gif_out</span>
-)
+    <pre class="examples"><div class='input'><span class='no'>man_city</span> <span class='kw'>&lt;-</span> <span class='fu'>create_brickr_player</span>(
+  <span class='kw'>hair_col</span> <span class='kw'>=</span> <span class='fl'>2</span>,
+  <span class='kw'>skin_col</span> <span class='kw'>=</span> <span class='fl'>39</span>,
+  <span class='kw'>boot_col</span> <span class='kw'>=</span> <span class='fl'>7</span>,
+  <span class='kw'>shirt_body_col</span> <span class='kw'>=</span> <span class='fl'>13</span>,
+  <span class='kw'>shirt_sleeve_col</span> <span class='kw'>=</span> <span class='fl'>13</span>,
+  <span class='kw'>shorts_col</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>sock_col</span> <span class='kw'>=</span> <span class='fl'>27</span>,
+  <span class='kw'>sock_trim_col</span> <span class='kw'>=</span> <span class='fl'>27</span>
+)</div><span class='co'># NOT RUN {</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>dplyr</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>brickr</span>)
+<span class='fu'>create_brickr_player</span>() <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='https://www.rdocumentation.org/packages/brickr/topics/bricks_from_table'>bricks_from_table</a></span>(<span class='no'>lego_colors</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='https://www.rdocumentation.org/packages/brickr/topics/display_bricks'>display_bricks</a></span>()
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

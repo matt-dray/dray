@@ -2,8 +2,10 @@
 
 export(cloud_pie)
 export(collembola_function)
+export(create_brickr_player)
 export(make_gif)
 export(ye_cols)
 import(gifski)
 import(plotrix)
 import(wordcloud)
+importFrom(tibble,tribble)
